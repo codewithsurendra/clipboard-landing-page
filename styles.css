@@ -33,7 +33,7 @@ body {
     align-items: center;
     text-align: center;
     line-height: 1.6;
-    margin: 3rem;
+    margin: 1rem;
 }
 
 .desktop {
@@ -174,7 +174,7 @@ footer .feature-logo {
     body {
         width: 90%;
         max-width: 60rem;
-        margin: auto;
+        margin: 0 auto;
     }
 
     .buttons {
