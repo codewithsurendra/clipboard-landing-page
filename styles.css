@@ -1,0 +1,251 @@
+:root {
+    --primary-font: 'Bai Jamjuree', sans-serif;
+
+    /* ----------Primary Colors---------- */
+
+    --Green500: hsl(171, 66%, 44%);
+    --Blue100: hsl(233, 100%, 69%);
+
+    /* -------Neutral Colors------------- */
+
+    --Gray700: hsl(210, 10%, 33%);
+    --Gray500: hsl(201, 15%, 55%);
+    --Gray300: hsl(190, 8%, 96%);
+    --White: hsl(0, 0%, 100%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: clamp(1.6rem, 1.2rem + 1vw, 1.8rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.6;
+    margin: 3rem;
+}
+
+.desktop {
+    width: 100%;
+    max-width: 100%;
+    margin: 3rem 0;
+}
+
+.img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--Gray700);
+    text-align: center;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(3rem, 1.5rem + 1vw, 6rem);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: clamp(2.8rem, 1rem + 1vw, 3.5rem);
+    ;
+}
+
+p {
+    color: var(--Gray500);
+    margin: 1rem;
+    font-size: clamp(1.3rem, 1rem + 1vw + 1.5rem);
+    text-align: center;
+}
+
+header {
+    margin: 5rem 0;
+}
+
+header img {
+    margin: 2rem 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+button {
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+    border-radius: 5rem;
+    color: var(--White);
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    border: 0;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.ios {
+    background-color: var(--Green500);
+}
+
+button.mac {
+    background-color: var(--Blue100);
+}
+
+button:hover {
+    transform: translate(5px);
+    box-shadow: 8px 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    margin: 3rem 0;
+}
+
+main section {
+    margin: 3rem 0;
+}
+
+article {
+    margin: 5rem 0;
+}
+
+article div {
+    margin: 3rem 0;
+}
+
+.logos {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 3rem;
+    background: var(--Gray300);
+    width: 100%;
+    padding: 3rem;
+    margin: 0;
+}
+
+footer .feature-logo {
+    width: 50%;
+}
+
+.footer-text {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-text div {
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-shrink: 0;
+}
+
+
+@media (min-width: 48rem) {
+
+    body {
+        width: 90%;
+        max-width: 60rem;
+        margin: auto;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button {
+        width: auto;
+        min-width: 22rem;
+    }
+
+    .grid-side-by-side {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    article {
+        display: flex;
+        gap: 3rem;
+        padding-inline: 1rem;
+    }
+
+    .desktop {
+        width: 70%;
+    }
+
+    .logos {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        align-self: center;
+    }
+
+    .logo {
+        flex: 0 1 12rem;
+    }
+
+    footer {
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+    }
+
+    .footer-text {
+        grid-template-columns: repeat(3, auto);
+        text-align: left;
+        justify-items: start;
+    }
+
+    footer .feature-logo {
+        width: 60%;
+    }
+}
+
+@media (min-width: 64rem) {
+    body {
+        max-width: 100rem;
+    }
+}
