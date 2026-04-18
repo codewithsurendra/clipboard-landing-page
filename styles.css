@@ -27,6 +27,8 @@ html {
 body {
     font-family: var(--primary-font);
     font-size: clamp(1.6rem, 1.2rem + 1vw, 1.8rem);
+    background-image: url(images/bg-header-mobile.png);
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -172,6 +174,7 @@ footer .feature-logo {
 @media (min-width: 48rem) {
 
     body {
+        background-image: url(images/bg-header-desktop.png);
         width: 90%;
         max-width: 60rem;
         margin: 0 auto;
